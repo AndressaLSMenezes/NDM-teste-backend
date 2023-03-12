@@ -1,5 +1,5 @@
-import { database } from "../database";
-import { AppError } from "../errors/appError";
+import { database } from "../database.js";
+import { AppError } from "../errors/appError.js";
 
 const ensurePlayerIdMiddleware = async (req, res, next) => {
   const id = req.params.id;

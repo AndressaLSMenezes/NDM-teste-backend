@@ -1,5 +1,5 @@
 import * as yup from "yup";
-import { database } from "../database";
+import { database } from "../database.js";
 
 const requestPlayerSerializer = yup.object().shape({
   nome: yup.string().required("O nome do jogador é obrigatório."),

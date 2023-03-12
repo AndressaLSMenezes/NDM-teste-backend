@@ -1,5 +1,5 @@
 import * as yup from "yup";
-import { listPlayersSerializer } from "./players.serializers";
+import { listPlayersSerializer } from "./players.serializers.js";
 const requestTeamSerializer = yup.object().shape({
   nome: yup.string().required("O nome do time é obrigatório."),
 });

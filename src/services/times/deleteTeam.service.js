@@ -1,4 +1,4 @@
-import { database } from "../../database";
+import { database } from "../../database.js";
 
 const deleteTeamService = async (id) => {
   const queryResponse = await database.query(

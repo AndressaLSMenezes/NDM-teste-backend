@@ -1,8 +1,8 @@
-import { createTeamService } from "../services/times/createTeam.service";
-import { deleteTeamService } from "../services/times/deleteTeam.service";
-import { getAllTeamsService } from "../services/times/getAllTeams.service";
-import { getTeamByIdService } from "../services/times/getTeamById.service";
-import { updateTeamService } from "../services/times/updateTeam.service";
+import { createTeamService } from "../services/times/createTeam.service.js";
+import { deleteTeamService } from "../services/times/deleteTeam.service.js";
+import { getAllTeamsService } from "../services/times/getAllTeams.service.js";
+import { getTeamByIdService } from "../services/times/getTeamById.service.js";
+import { updateTeamService } from "../services/times/updateTeam.service.js";
 
 const createTeamController = async (request, response) => {
   const data = await createTeamService(request.body);

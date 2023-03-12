@@ -1,16 +1,14 @@
 {
   "name": "NDM-teste-backend",
   "version": "1.0.0",
-  "main": "./src/app.js",
+  "main": "./src/index.js",
   "repository": "https://github.com/AndressaLSMenezes/NDM-teste-backend.git",
   "author": "Andressa Lopes <andressalsmenezes@gmail.com>",
   "license": "MIT",
-  "private": false,
   "scripts": {
-    "dev": "nodemon ./src/server.js",
-    "start": "node server.js"
+    "start": "node src/index",
+    "dev": "nodemon src/index"
   },
-  "type": "module",
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "4.18.2",
@@ -21,5 +19,6 @@
   "devDependencies": {
     "nodemon": "^2.0.21",
     "sucrase": "^3.29.0"
-  }
+  },
+  "type": "module"
 }

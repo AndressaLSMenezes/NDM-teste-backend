@@ -1,6 +1,6 @@
-import { database } from "../../database";
-import { AppError } from "../../errors/appError";
-import { responsePlayerSerializer } from "../../serializers/players.serializers";
+import { database } from "../../database.js";
+import { AppError } from "../../errors/appError.js";
+import { responsePlayerSerializer } from "../../serializers/players.serializers.js";
 
 const createPlayerService = async ({ nome, idade, time_id }) => {
   const result = await database.query(

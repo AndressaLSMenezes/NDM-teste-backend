@@ -1,5 +1,5 @@
-import { database } from "../../database";
-import { responseTeamSerializer } from "../../serializers/teams.serializers";
+import { database } from "../../database.js";
+import { responseTeamSerializer } from "../../serializers/teams.serializers.js";
 
 const updateTeamService = async (id, data) => {
   const values = Object.values(data);

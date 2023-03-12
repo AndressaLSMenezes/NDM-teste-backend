@@ -1,8 +1,8 @@
-import { createPlayerService } from "../services/players/createPlayer.service";
-import { deletePlayerService } from "../services/players/deletePlayer.service";
-import { getAllPlayersService } from "../services/players/getAllPlayers.service";
-import { getPlayerByIdService } from "../services/players/getPLayerById.service";
-import { updatePlayerService } from "../services/players/updatePlayer.service";
+import { createPlayerService } from "../services/players/createPlayer.service.js";
+import { deletePlayerService } from "../services/players/deletePlayer.service.js";
+import { getAllPlayersService } from "../services/players/getAllPlayers.service.js";
+import { getPlayerByIdService } from "../services/players/getPLayerById.service.js";
+import { updatePlayerService } from "../services/players/updatePlayer.service.js";
 
 const createPlayerController = async (request, response) => {
   const data = await createPlayerService(request.body);

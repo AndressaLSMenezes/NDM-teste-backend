@@ -1,18 +1,18 @@
 import { Router } from "express";
-import { ensurePlayerIdMiddleware } from "../middlewares/ensurePlayerId.middleware";
-import { ensureTeamIdMiddleware } from "../middlewares/ensureTeamId.middleware";
+import { ensurePlayerIdMiddleware } from "../middlewares/ensurePlayerId.middleware.js";
+import { ensureTeamIdMiddleware } from "../middlewares/ensureTeamId.middleware.js";
 import {
   createPlayerController,
   deletePlayerController,
   getAllPlayersController,
   getPlayerByIdController,
   updatePlayerController,
-} from "../controllers/players.controllers";
+} from "../controllers/players.controllers.js";
 import {
   requestPlayerSerializer,
   updatePlayerSerializer,
-} from "../serializers/players.serializers";
-import { validatedDataMiddleware } from "../middlewares/validatedData.middlewares";
+} from "../serializers/players.serializers.js";
+import { validatedDataMiddleware } from "../middlewares/validatedData.middlewares.js";
 
 const playersRouter = Router();
 

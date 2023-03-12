@@ -1,6 +1,6 @@
-import { database } from "../../database";
-import { AppError } from "../../errors/appError";
-import { responseTeamSerializer } from "../../serializers/teams.serializers";
+import { database } from "../../database.js";
+import { AppError } from "../../errors/appError.js";
+import { responseTeamSerializer } from "../../serializers/teams.serializers.js";
 
 const createTeamService = async ({ nome }) => {
   try {

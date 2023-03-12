@@ -1,5 +1,5 @@
-import { database } from "../../database";
-import { responsePlayerSerializer } from "../../serializers/players.serializers";
+import { database } from "../../database.js";
+import { responsePlayerSerializer } from "../../serializers/players.serializers.js";
 
 const updatePlayerService = async (id, data) => {
   let query = "UPDATE jogadores SET ";

@@ -1,8 +1,5 @@
-import { responseTeamSerializer } from "../../serializers/teams.serializers";
-import { database } from "../../database";
-import { responseTeamSerializer } from "../../serializers/teams.serializers";
+import { database } from "../../database.js";
 
-import { database } from "../../database";
 const getTeamByIdService = async (id) => {
   const queryResponse = await database.query(
     `
