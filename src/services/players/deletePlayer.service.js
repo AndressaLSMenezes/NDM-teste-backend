@@ -11,8 +11,7 @@ const deletePlayerService = async (id) => {
         `,
     [id]
   );
-
-  return { message: "Jogador excluído com sucesso" };
+  return queryResponse
 };
 
 export { deletePlayerService };

@@ -24,20 +24,7 @@ const requestPlayerSerializer = yup.object().shape({
 const updatePlayerSerializer = yup.object().shape({
   nome: yup.string(),
   idade: yup.number().integer(),
-  time_id: yup
-    .number()
-    .integer()
-    .test(
-      "time-id-exists",
-      "O time_id fornecido não existe na tabela de times.",
-      async (value) => {
-        const { rows } = await database.query(
-          `SELECT * FROM "time" WHERE id = $1`,
-          [value]
-        );
-        return rows.length > 0;
-      }
-    ),
+  time_id: yup.number().integer(),
 });
 
 const responsePlayerSerializer = yup.object().shape({

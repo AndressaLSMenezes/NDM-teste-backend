@@ -1,6 +1,5 @@
 import { database } from "../../database";
 
-
 const deleteTeamService = async (id) => {
   const queryResponse = await database.query(
     `
@@ -13,7 +12,7 @@ const deleteTeamService = async (id) => {
     [id]
   );
 
-  return { message: "Jogador excluído com sucesso" };
+  return queryResponse;
 };
 
 export { deleteTeamService };

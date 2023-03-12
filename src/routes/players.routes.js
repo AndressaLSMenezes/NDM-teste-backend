@@ -3,7 +3,10 @@ import { ensurePlayerIdMiddleware } from "../middlewares/ensurePlayerId.middlewa
 import { ensureTeamIdMiddleware } from "../middlewares/ensureTeamId.middleware";
 import {
   createPlayerController,
+  deletePlayerController,
   getAllPlayersController,
+  getPlayerByIdController,
+  updatePlayerController,
 } from "../controllers/players.controllers";
 import {
   requestPlayerSerializer,
@@ -20,12 +23,13 @@ playersRouter.post(
   createPlayerController
 );
 playersRouter.get("", getAllPlayersController);
-playersRouter.get("/:id", ensurePlayerIdMiddleware);
+playersRouter.get("/:id", ensurePlayerIdMiddleware, getPlayerByIdController);
 playersRouter.patch(
   "/:id",
   validatedDataMiddleware(updatePlayerSerializer),
-  ensurePlayerIdMiddleware
+  ensurePlayerIdMiddleware,
+  updatePlayerController
 );
-playersRouter.delete("/:id", ensurePlayerIdMiddleware);
+playersRouter.delete("/:id", ensurePlayerIdMiddleware, deletePlayerController);
 
 export { playersRouter };
