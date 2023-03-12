@@ -6,8 +6,9 @@
   "author": "Andressa Lopes <andressalsmenezes@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node src/index",
-    "dev": "nodemon src/index"
+    "start": "node dist/index.js",
+    "build": "sucrase --transforms imports --out-dir dist src",
+    "dev": "nodemon src/index.js"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
@@ -19,6 +20,5 @@
   "devDependencies": {
     "nodemon": "^2.0.21",
     "sucrase": "^3.29.0"
-  },
-  "type": "module"
+  }
 }
